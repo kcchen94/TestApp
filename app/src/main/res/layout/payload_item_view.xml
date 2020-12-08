@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/mainContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/app_bg_product_rounded"
+    android:layout_marginBottom="5dp"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageContainer"
+        android:layout_weight="0.3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/app_bg_product_rounded"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp" >
+
+        <ImageView
+            android:id="@+id/mainImageView"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/overlayContainer"
+            android:background="@android:color/black"
+            android:alpha="0.7"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/overlayText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/itemDetailProductName"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/itemDetailProductDesc"
+            android:maxLines="1"
+            android:textColor="@color/light_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/itemDetailProductStar"
+                android:textColor="@android:color/black"
+                android:drawableStart="@drawable/ic_star"
+                android:drawableLeft="@drawable/ic_star"
+                android:drawablePadding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/itemDetailProductDistance"
+                android:textColor="@android:color/black"
+                android:drawableStart="@drawable/ic_location_on"
+                android:drawableLeft="@drawable/ic_location_on"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:drawablePadding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/itemDetailProductPromoDesc"
+            android:textColor="@android:color/black"
+            android:drawableStart="@drawable/ic_card_giftcard"
+            android:drawableLeft="@drawable/ic_card_giftcard"
+            android:drawablePadding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/itemDetailProductBranchAround"
+            android:textColor="@android:color/darker_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>
